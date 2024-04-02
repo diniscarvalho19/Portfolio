@@ -1,0 +1,136 @@
+
+@keyframes background-color-change {
+    0%{
+        background-color: #ffffff;
+    }
+    50%{
+        background-color: #000;
+      } 
+    100% {
+        background-color: #ffffff;
+    } 
+}
+
+@keyframes title-color-change {
+    0%{
+        color: #000;
+    }
+    50%{
+        color: #ffffff;
+      } 
+    100% {
+        color: #000;
+    } 
+}
+
+@keyframes button-color-change {
+    0%{
+        color: #000;
+        background-color: #ffffff;
+        border: 2px solid #000;
+        /*box-shadow: 5px 5px 0px #000;*/
+    }
+    50%{
+        color: #ffffff;
+        background-color: #000;
+        border: 2px solid #ffffff;
+        /*box-shadow: 5px 5px 0px #ffffff;*/
+      } 
+    100% {
+        color: #000;
+        background-color: #ffffff;
+        border: 2px solid #000;
+        /*box-shadow: 5px 5px 0px #000;*/
+    } 
+}
+
+
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px  #000;
+    animation: background-color-change 25s infinite;
+}
+
+.header .new-grid-button{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    min-width: 145px;
+    height: 25px;
+    width: auto;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #7d7d7d;
+    cursor: pointer;
+    animation: button-color-change 25s infinite;
+    transition: all 0.5s ease;
+    letter-spacing: 2px;
+    scale: 0.9;
+        
+}
+
+.header .new-grid-button:hover{
+    scale: 1;
+}
+
+.header .new-grid-button:active{
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+.header h1{
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 2px;
+    animation: title-color-change 25s infinite;
+}
+
+.body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap:15px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    height: 320px;
+    border: solid #000;
+}
+
+.grid{
+    width: calc(100% / 16); 
+    height: calc(100% / 16); 
+}
+
+.error-active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    height: 34px;
+    width: auto;
+    border: none;
+    background: #ff362b34;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 17px;
+    color: #FF342B;
+    font-family: "Courier New", Courier, monospace;
+    letter-spacing: 1px;
+}
+
+
+
+
+

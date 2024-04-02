@@ -13,7 +13,6 @@
 
 .header{
     font-family: "Courier New", Courier, monospace;
-    
     justify-content: center;
     padding: 10px;
     margin: 15px;
@@ -55,7 +54,6 @@
     border: 2px solid #000;
     border-radius: 10px;
     box-shadow: 5px 5px 0px #000;
-    transition: all 0.3s ease;
     cursor: pointer;
     transition: all 0.3s ease;
     scale: 0.9;
