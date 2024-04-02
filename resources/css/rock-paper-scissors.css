@@ -1,0 +1,222 @@
+  
+  @keyframes type {
+    0%,
+    10% {
+      width: 0;
+    }
+    50%,
+    100% {
+      width: 150px;
+    } 
+    
+  }
+
+.header{
+    font-family: "Courier New", Courier, monospace;
+    
+    justify-content: center;
+    padding: 10px;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #ff5252;
+    border: px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+}
+
+.body{
+    font-family: "Courier New", Courier, monospace;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 15px;
+    font-size: 15px;
+    gap: 15px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons > * {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff5252;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    scale: 0.9;
+  }
+  
+  #rock:hover {
+    background-color: #fff;
+    color: #ff5252;
+    border: 2px solid #ff5252;
+    box-shadow: 5px 5px 0px #ff5252;
+    scale: 1;
+  }
+
+  #paper:hover {
+    background-color: #fff;
+    color: #ff5252;
+    border: 2px solid #ff5252;
+    box-shadow: 5px 5px 0px #ff5252;
+    scale: 1;
+  }
+
+  #scissor:hover {
+    background-color: #fff;
+    color: #ff5252;
+    border: 2px solid #ff5252;
+    box-shadow: 5px 5px 0px #ff5252;
+    scale: 1;
+  }
+  
+  #rock:active {
+    background-color: #fcf414;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+
+  #paper:active {
+    background-color: #fcf414;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+
+  #scissor:active {
+    background-color: #fcf414;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+
+.player, .computer{
+    display: flex;
+    justify-content: space-between;
+    gap: 90px;
+    max-width: 700px;
+    min-width: 700px;
+    padding: 10px 40px;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #ff5252;
+    border: px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+}
+
+#computerChoice, #playerChoice{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #ff5252;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    border: 2px solid #000;
+}
+
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 500px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #ff5252;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    border: 2px solid #000;
+}
+
+.text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #fff; 
+    animation: type 4s steps(11) 
+  }
+
+
+  .container{
+    margin-top: 40px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .addButton {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 2px solid #323232;
+    box-shadow: 4px 4px #323232;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .addButton, .addButton__icon, .addButton__text {
+    transition: all 0.3s;
+  }
+  
+  .addButton .addButton__text {
+    transform: translateX(22px);
+    color: #323232;
+    font-weight: 600;
+  }
+  
+  .addButton .addButton__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #dedede;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .addButton .svg {
+    width: 20px;
+    fill: #323232;
+  }
+  
+
+  .addButton:hover .addButton__icon {
+    width: 150px;
+    transform: translateX(-10px);
+  }
+  
+  .addButton:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px #323232;
+  }
