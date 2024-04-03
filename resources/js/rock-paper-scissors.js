@@ -9,16 +9,6 @@ const computer_text = document.querySelector("#computerChoice")
 const container = document.querySelector(".container")
 const buttonTest = document.querySelector(".addButton")
 
-function addText(){
-    const content = document.createElement("div");
-    content.classList.add("content")
-    content.textContent = "This is the glorious text-content!";
-    container.appendChild(content);
-}
-
-
-buttonTest.addEventListener("click", () => addText());
-
 
 function playRound(player_choice) {    
 
