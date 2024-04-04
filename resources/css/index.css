@@ -1,0 +1,182 @@
+/* this is some magical font-importing.  
+you'll learn about it later. */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  margin: 0;
+  background: #eee;
+  font-family: Roboto, arial;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+  background: #3d506c;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.header .left .logo img {
+    width: 80px;
+    margin-right: auto;
+    padding: 10px;
+}
+
+
+button {
+    display: block;
+    text-align: center;
+    width: 110px;
+    border: none;
+    background: #3882f6;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Roboto', arial;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #E5E7EB;
+    font-size: 18px;
+    padding: 10px;
+    font-family: 'Roboto', arial;
+    font-weight: bolder;
+}
+
+ul {
+    display: flex;
+    margin-left: auto;
+    padding: 0px 100px 0px 0px;  
+    list-style-type: none;
+
+}
+
+
+
+.header .left,  .header .right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+
+  .subheader {
+    background: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    gap: 100px;
+  }
+
+  .subheader .left,  .subheader .right {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .subheader .left .title{
+    color: #f9faf8;
+    font-size: 48px;
+    font-weight: bold;  
+    
+  }
+
+  .subheader .left p{
+    color: #f9faf8;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: left; 
+  }
+
+  .subheader .right img{
+    max-width: 500px;
+    height: 350px;
+  }
+
+  .content {
+    align-items: center;
+    text-align: center;
+}
+
+.content h2{
+    font-size: 36px
+}
+
+.content-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-weight: 500;  
+}
+
+
+
+
+
+.content-info img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid #3882F6;
+    border-radius: 15px;
+    margin: 5px 20px 0px 20px;
+}
+
+
+.sign-up {
+    background-color: #3882F6 ;
+    margin: 50px 200px;
+    padding: 10px 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    border-color: none;
+}
+
+.sign-up .item {
+    flex: 1;
+}
+
+.sign-up .text {
+    text-align: left;
+}
+
+.sign-up .text p {
+    color: #fff;
+    opacity: 0.7;
+    margin: 5px 30px 30px 50px;
+}
+
+h3 {
+    color: #fff;
+    padding: 0;
+    margin: 30px 0px 0px 50px;
+}
+
+.sign-up button {
+    color: #fff;
+    border-color: #fff;
+    border-radius: 8px;
+    background-color: #3882F6;
+    padding: 5px 25px;
+    font-size: 15px;
+}
+
+
+.footer {
+    display: flex;
+    background-color: #1F2937;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
