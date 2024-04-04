@@ -2,10 +2,15 @@ const container = document.querySelector(".grid-container");
 const newGridButton = document.querySelector(".new-grid");
 const errorHandling = document.querySelector(".error-handling");
 const switchElement = document.querySelector('.rainbow-switch');
+const cleanGridButton = document.querySelector('.clean-grid');
 
 let sizeGlobal = 16;
 
 let isRainbow = false;
+
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
 
 switchElement.addEventListener('change', (event) => {
   if (event.target.checked) {
@@ -28,6 +33,7 @@ gridGenerator = function(size){
             content.style.width = `calc(100% / ${size})`;
             content.style.height = `calc(100% / ${size})`;
             content.addEventListener('mouseover', () => {  
+                if (!mouseDown) return
                 if (isRainbow){
                     var randomColor = Math.floor(Math.random()*16777215).toString(16);
                     content.style.backgroundColor = "#" + randomColor;
@@ -68,6 +74,10 @@ askForNewSize = function(){
 
 newGridButton.addEventListener("click", ()=> {
     askForNewSize();    
+});
+
+cleanGridButton.addEventListener("click", ()=> {
+    gridGenerator(sizeGlobal);   
 });
 
 

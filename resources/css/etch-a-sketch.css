@@ -23,12 +23,45 @@
     } 
 }
 
+@keyframes exit-shadow-color-change {
+    0%{
+        box-shadow: 2px 2px 15px rgb(0, 0, 0);
+
+    }
+    50%{
+        box-shadow: 2px 2px 15px rgb(255, 255, 255);
+
+      } 
+    100% {
+        box-shadow: 2px 2px 15px rgb(0, 0, 0);
+
+    } 
+}
+
 @keyframes spin {
     from {
       transform: rotate(0deg);
     }
     to {
       transform: rotate(360deg);
+    }
+  }
+
+  @keyframes side-by-side {
+    0% {
+      transform: translateX(0px);
+    }
+    25%{
+       transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(0px);
+    }
+    75% {
+        transform: translateX(5px);
+      }
+    100% {
+      transform: translateX(0px);
     }
   }
 
@@ -67,6 +100,76 @@ body{
     letter-spacing: 2px;
     animation: title-color-change 25s infinite;
 }
+
+a {
+    text-decoration: none;
+}
+
+
+.exit-button {
+    display: flex;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    animation: exit-shadow-color-change 25s infinite;
+    background-color: white;
+    transition-duration: .3s;
+  }
+  
+  .sign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition-duration: .3s;
+  }
+  
+  .runner{
+    opacity: 0;
+    width: 0%;
+    transition-duration: .3s;
+    
+  }
+  
+  
+  .exit-text {
+    opacity: 0;
+    width: 0%;
+    font-family: "Courier New", Courier, monospace;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    transition-duration: .3s;
+  }
+  
+  .exit-button:hover {
+    width: 120px;
+    border-radius: 40px;
+  }
+  
+  .exit-button:hover .sign {
+    padding-left: 10px;
+  }
+  
+  .exit-button:hover .runner {
+    opacity: 1;
+    width: 70%;
+    padding-right: 12px;
+  }
+  
+  .exit-button:hover .exit-text {
+    opacity: 1;
+    width: 70%;
+    padding-right: 20px;
+  }
+  
+  .exit-button:active {
+    transform: translate(2px ,2px);
+  }
 
 .card {
     display: flex;
@@ -108,6 +211,20 @@ body{
 .tools-button.new-grid:hover{
     animation: spin infinite linear 1s;
 }
+
+.sparkles{
+    opacity: 0;
+    transform: rotate(180deg);
+}
+
+.tools-button.clean-grid:hover svg{
+    animation: side-by-side infinite linear 0.65s;
+}
+
+.tools-button.clean-grid:hover .sparkles{
+    opacity: 100%;
+}
+
 
 .input {
     display: none;
@@ -151,6 +268,7 @@ body{
 .grid{
     width: calc(100% / 16); 
     height: calc(100% / 16); 
+    cursor: crosshair;
 }
 
 

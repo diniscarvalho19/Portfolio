@@ -12,23 +12,95 @@
   }
 
 .header{
-    font-family: "Courier New", Courier, monospace;
-    justify-content: center;
-    padding: 10px;
-    margin: 15px;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    color: #fff;
-    background-color: #ff5252;
-    border: px solid #000;
-    border-radius: 10px;
-    box-shadow: 5px 5px 0px #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  margin: 15px;
+  background-color: #ff5252;
+  border: px solid #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #000;
+}
+
+.header h1{
+  font-family: "Courier New", Courier, monospace;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.exit-button {
+  display: flex;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.199);
+  background-color: white;
+  transition-duration: .3s;
+}
+
+.sign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition-duration: .3s;
+}
+
+.runner{
+  opacity: 0;
+  width: 0%;
+  transition-duration: .3s;
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+.exit-text {
+  opacity: 0;
+  width: 0%;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  transition-duration: .3s;
+}
+
+.exit-button:hover {
+  width: 120px;
+  border-radius: 40px;
+}
+
+.exit-button:hover .sign {
+  padding-left: 10px;
+}
+
+.exit-button:hover .runner {
+  opacity: 1;
+  width: 70%;
+  padding-right: 12px;
+}
+
+.exit-button:hover .exit-text {
+  opacity: 1;
+  width: 70%;
+  padding-right: 20px;
+}
+
+.exit-button:active {
+  transform: translate(2px ,2px);
 }
 
 .body{
     font-family: "Courier New", Courier, monospace;
-
     display: flex;
     align-items: center;
     flex-direction: column;
