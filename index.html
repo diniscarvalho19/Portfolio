@@ -7,70 +7,106 @@
     <title>Landing Page</title>
     <link rel="icon" href="./resources/images/dcarvalho-logo.jpeg">
     <link rel="stylesheet" href="./resources/css/index.css">
+    <script defer src="./resources/js/index.js"></script>
   </head>
   <body>
-    <div class="container">
+
+    <a id="home">HOME</a>
+    <a id="about">ABOUT</a>
+    <a id="projects">PROJECTS</a>
+    <a id="contact">CONTACT</a>
+
+    <nav>
+      <div class="box archivo-black-regular">
+        <ul>
+          <li id="icon"> <a href="#home"> ICON</a></li>
+
+          <li id="time"><a> Coimbra, Portugal <span id="hours"></span> <span id="blinking-colon">:</span>  <span id="minutes"></span></a></li>
+
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li id="navs"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="home">
+
       <div class="header">
-        <div class="left">
-          <div class="logo">
-            <img src="./resources/images/dcarvalho-logo.jpeg">
-          </div>
-        </div>
-        <div class="right">
-          <ul class="links">
-            <li><a href="https://google.com">Home</a></li>
-            <li><a href="https://google.com">Shop</a></li>
-            <li><a href="https://google.com">News</a></li>
-          </ul>
-        </div>
+        <img src="./resources/images/header.jpg">
       </div>
+
       <div class="subheader">
-        <div class="left">
-          <div class="title">
-            Welcome to Monkey Fanpage
-          </div>
-          <p>No banana is safe. No heart is unbroken. This is the life of a
-            monkey.
-            <br>
-            These guys are bonkers. This page is dedicated to monkey madness.
-          </p>
-          <button>
-            Sign up
-          </button>
-        </div>
-        <div class="right">
-          <img src="./resources/images/monk.jpg" alt="monka">
-        </div>
-      </div>
-      <div class="content">
-        <h2>The Classics!</h2>
-        <div class="content-info">
-          <div>
-            <a href="./resources/html/rock-paper-scissors.html">
-            <img src="./resources/images/rock-paper-scissors.png">
-            </a>
-            <p>Rock Paper Scissors!</p>
-          </div>
-          <div>
-            <a href="./resources/html/etch-a-sketch.html">
-            <img src="./resources/images/etch-a-sketch.png">
-            </a>
-            <p>Etch-a-Sketch!</p>
-          </div>
-        </div>
-      </div>
-      <div class="sign-up">
-        <div class="text">
-          <h3>Keep it updated with Monky News</h3>
-          <p>Subscribe now for daily emails!</p>
+        <div class="title archivo-black-regular">
+          WELCOME <br> TO MY PORTFOLIO
         </div>
 
-        <button>Sign Up</button>
+        <p class="archivo-black-regular">It's still being built so, for now,
+          i've developed two games to entertain you.
+          <br>
+          My experience, education and other projects will be next!
+        </p>
 
       </div>
-      <div class="footer">
-        <p>Copyright © Monkey Corp.</p>
+    </section>
+
+
+    <section id="about">
+      <h1>About</h1>
+    </section>
+
+    <section id="projects">
+
+      <div class="subheader">
+
+        <div class="title archivo-black-regular">
+          THE PROJECTS
+        </div>
+
+        <p class="archivo-black-regular">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis odio
+          quis magna venenatis
+          <br>
+          Pellentesque metus dui, tincidunt non laoreet quis, sollicitudin at
+          ipsum.
+        </p>
       </div>
-    </div>
+
+      <div class="content archivo-black-regular">
+
+        <div>
+          <a href="https://diniscarvalho19.github.io/Padeira-de-Aljubarrota/">
+            <img width="100px" height="100px"
+              src="./resources/images/bread.jpg">
+          </a>
+          <p>Aljubarrota Baker</p>
+        </div>
+
+        <div>
+          <a href="./resources/html/rock-paper-scissors.html">
+            <img width="100px" height="100px"
+              src="./resources/images/rock-paper-scissors.png">
+          </a>
+          <p>Rock Paper Scissors!</p>
+        </div>
+
+        <div>
+          <a href="./resources/html/etch-a-sketch.html">
+            <img width="100px" height="100px"
+              src="./resources/images/etch-a-sketch.png">
+          </a>
+          <p>Etch-a-Sketch!</p>
+        </div>
+        
+      </div>
+
+    </section>
+    
+    <section id="contact">
+      <h1>CONTACT</h1>
+    </section>
+
+
   </body>
 </html>
