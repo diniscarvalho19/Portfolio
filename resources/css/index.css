@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+@keyframes glow {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  
+body {
+  padding: 0;
+  margin: 0; 
+  height: 50vw;
+  background: #18191f;
+  font-family: "Archivo Black", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 1.5vw;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.exit-button {
+  display: flex;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.199);
+  background-color: white;
+  transition-duration: .3s;
+}
+
+.sign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition-duration: .3s;
+}
+
+.runner{
+  opacity: 0;
+  width: 0%;
+  transition-duration: .3s;
+  
+}
+
+a {
+  text-decoration: none;
+  padding-left: 10vw;
+}
+
+#hide-link{
+    opacity: 0;
+    pointer-events: none;
+    cursor: default;
+}
+
+.arrow {
+    cursor: pointer;
+    width: 50px;
+    height: 60px;
+    transform: scale(100%);
+    transition: transform 0.5s;
+  }
+  
+  .arrow-top, .arrow-bottom {
+    background-color: #666;
+    height: 4px;
+    left: -5px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+  
+  .arrow-top:after, .arrow-bottom:after {
+    background-color: #fff;
+    content: "";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 0.15s;
+  }
+  
+  .arrow-top {
+    transform: rotate(45deg);
+    transform-origin: bottom right;
+  }
+  
+  .arrow-top:after {
+    left: 100%;
+    right: 0;
+    transition-delay: 0s;
+  }
+  
+  .arrow-bottom {
+    transform: rotate(-45deg);
+    transform-origin: top right;
+  }
+  
+  .arrow-bottom:after {
+    left: 0;
+    right: 100%;
+    transition-delay: 0.15s;
+  }
+  
+  .arrow:hover .arrow-top:after {
+    left: 0;
+    transition-delay: 0.15s;
+  }
+  
+  .arrow:hover .arrow-bottom:after {
+    right: 0;
+    transition-delay: 0s;
+  }
+  
+  .arrow:active {
+    transform: scale(0.9);
+  }
+
+  /*Arrow Parrots*/
+
+  .arrow .parrot {
+    position: absolute;
+    width: 5vw;
+    text-align: center;
+    animation: blink infinite;
+    color: transparent;
+  }
+  
+  .arrow .parrot:before {
+    content: "Click Me!";
+  }
+  
+  .arrow .parrot:nth-child(1) {
+    bottom: 1vw;
+    right: 4vw;
+    font-size: 1.0vw;
+    transform: rotate(-20deg);
+    animation-duration: 0.8s;
+  }
+  
+  .arrow .parrot:nth-child(2) {
+    font-size: 1.2vw;
+    top: -5vw;
+    right: 2vw;
+    transform: rotate(15deg);
+    animation-duration: 0.6s;
+  }
+  
+  .arrow .parrot:nth-child(3) {
+    font-size: 1.4vw;
+    bottom: 3vw;
+    left: 3vw;
+    transform: rotate(10deg);
+    animation-duration: 0.7s;
+  }
+  
+  
+  .arrow:hover .parrot:before {
+    content: "Do it!";
+    
+  }
+
+  
+  @keyframes blink {
+    25%, 75% {
+      color: transparent;
+    }
+  
+    40%, 60% {
+      color: #fff;
+    }
+  }
+
+
+  
+
+.space-filler{
+    width: 15vw;
+}
+
+ul {
+  display: flex; 
+}
+
+li {
+  list-style: none;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 5.5vw;
+  width: 5.5vw;
+  z-index: 100;
+}
+
+li div {
+  position: relative;
+  height: 5.5vw;
+  width: 5.5vw;
+  background: #2d2d32;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  cursor: pointer;
+  margin-right: 1vw;
+  border-radius: 2vw;
+  box-shadow: 0 0 1vw rgba(255, 255, 255, 0.05);
+}
+
+
+input[type="checkbox"]:checked ~ div {
+  background: #09090a;
+  color: yellow;
+  animation: glow 1.5s linear infinite;
+}
+
+
+#loader {
+    width: 0%;
+    height: 0.5vw;
+    display: inline-block;
+    position: relative;
+    background: #FFF;
+  }

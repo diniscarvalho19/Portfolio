@@ -2,7 +2,6 @@
 you'll learn about it later. */
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
 @keyframes blinkCursor {
   50% {
@@ -76,10 +75,6 @@ html {
 .archivo-black-regular {
   font-family: "Archivo Black", sans-serif;
   font-style: normal;
-}
-
-.roboto-text {
-  font-family:'Roboto';
 }
 
 
