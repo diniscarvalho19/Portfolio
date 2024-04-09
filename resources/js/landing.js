@@ -1,5 +1,13 @@
-const hoursElement = document.getElementById("hours");
-const minutesElement = document.getElementById("minutes");
+// VARIABLES
+
+let hoursElement = document.getElementById("hours");
+let minutesElement = document.getElementById("minutes");
+let buttons = document.querySelectorAll('.about--navigation button');
+let aboutTextSections = document.querySelectorAll('.about--text');
+let overlay = document.querySelector(".curtain");
+
+
+// FUNCTIONS
 
 function updateTime() {
   const date = new Date();
@@ -23,8 +31,10 @@ function updateTime() {
   minutesElement.textContent = minutesFormattedTime.padStart(2, "0");
 }
 
-const buttons = document.querySelectorAll('.about--navigation button');
-const aboutTextSections = document.querySelectorAll('.about--text');
+
+
+
+// EVENT LISTENERS
 
 buttons.forEach(button => {
   button.addEventListener('click', function() {
@@ -37,6 +47,12 @@ buttons.forEach(button => {
       }
     });
   });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  overlay.classList.add("fade-out");
 });
 
 updateTime();
