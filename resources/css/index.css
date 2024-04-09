@@ -72,21 +72,6 @@ body {
     align-items: center;
 }
 
-.exit-button {
-  display: flex;
-  align-items: center;
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  overflow: hidden;
-  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.199);
-  background-color: white;
-  transition-duration: .3s;
-}
-
-
 
 .translated {
     transition-duration: .5s;
@@ -102,22 +87,6 @@ body {
   }
   
 
-
-.sign {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  transition-duration: .3s;
-}
-
-.runner{
-  opacity: 0;
-  width: 0%;
-  transition-duration: .3s;
-  
-}
-
 a {
   text-decoration: none;
   padding-left: 10vw;
@@ -131,16 +100,16 @@ a {
 
 .arrow {
     cursor: pointer;
-    width: 50px;
-    height: 60px;
+    width: 3vw;
+    height: 4vw;
     transform: scale(100%);
     transition: transform 0.5s;
   }
   
   .arrow-top, .arrow-bottom {
     background-color: #666;
-    height: 4px;
-    left: -5px;
+    height: 0.3vw;
+    left: -1vw;
     position: absolute;
     top: 50%;
     width: 100%;
@@ -295,7 +264,6 @@ input[type="checkbox"]:checked ~ div {
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: solid red 1px;
   }
   
   .snow span {
@@ -303,7 +271,7 @@ input[type="checkbox"]:checked ~ div {
     width: 1vw;
     height: 0.25vw;
     background: #fff;
-    margin: 0 2px;
+    margin: 0 0.2vw;
     border-radius: 50%;
     animation: snowing linear infinite;
     animation-duration: calc(15s / var(--i));

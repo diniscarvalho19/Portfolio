@@ -9,20 +9,6 @@ you'll learn about it later. */
   }
 }
 
-@keyframes typeAndDelete {
-  0%,
-  10% {
-    width: 0;
-  }
-  45%,
-  55% {
-    width: 300px;
-  }
-  90%,
-  100% {
-    width: 0;
-  }
-}
 
 @keyframes blink {
   0%, 100%{
@@ -96,7 +82,7 @@ html {
 }
 
 .fade-out {
-  animation: fadeOut 2s ease forwards;
+  animation: fadeOut 1.5s ease forwards;
 }
 
 .archivo-black-regular {
@@ -121,7 +107,7 @@ nav ul li {
 
 nav ul li a {
   color: var(--home-bg-color);
-  font-size: 1vw;
+  font-size: 1.2vw;
   display: block;
   text-decoration: none;
   padding: 0.5vw;
@@ -130,12 +116,12 @@ nav ul li a {
 }
 
 #navs{
-  margin-right: 7vw;
+  margin-right: 3vw;
 }
 
 
 #icon{
-  margin-right: 8vw;
+  margin-right: 7vw;
 }
 
 
@@ -153,7 +139,7 @@ nav ul li a {
 #time{
   font-size: 1vw;
   color: var(--home-bg-color);
-  margin-right: 35vw;
+  margin-right: 33vw;
 }
 
 
@@ -176,11 +162,11 @@ section h1{
   text-align:center;
   color:#fff;
   font-weight:100;
-  font-size:90px;
+  font-size:10vw;
 }
 
 #home{
-  padding-top: 1vw;
+  padding-top: -1vw;
   margin: 0;
   background-color: var(--home-bg-color);
 }
@@ -193,9 +179,9 @@ section h1{
 }
 
 .header img{
-    height: 100%;
     width: 100%;
     object-fit: contain;
+    border: solid 0.65vw black;
 }
 
 
@@ -203,7 +189,6 @@ section h1{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
   padding-top: 3vw;
   padding-bottom: 1vw;
   padding-left: 3vw;
@@ -322,6 +307,11 @@ section h1{
   color:#c10528;
 }
 
+#home .bio{
+  margin-top: 4vw;
+  font-size: 1.5vw;
+}
+
 
 
 
@@ -348,8 +338,7 @@ section h1{
   height: 10vw;
   object-fit: cover;
   border: 0.25vw solid #000000;
-  border-radius: 15px;
-  margin: 5px 20px 0px 20px;
+  border-radius: 2vw;
   pointer-events: visible;
   background: #fff;
 
