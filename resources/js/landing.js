@@ -2,9 +2,15 @@
 
 let hoursElement = document.getElementById("hours");
 let minutesElement = document.getElementById("minutes");
-let buttons = document.querySelectorAll('.about--navigation button');
-let aboutTextSections = document.querySelectorAll('.about--text');
 let overlay = document.querySelector(".curtain");
+
+let introButton = document.querySelector(".intro");
+let educationButton = document.querySelector(".education");
+let experienceButton = document.querySelector(".experience");
+let skillsButton = document.querySelector(".skills");
+
+let firstChild = document.querySelector(".about--content > div:first-child");
+
 
 
 // FUNCTIONS
@@ -32,22 +38,25 @@ function updateTime() {
 }
 
 
-
-
-// EVENT LISTENERS
-
-buttons.forEach(button => {
-  button.addEventListener('click', function() {
-    const section = this.dataset.section;
-
-    aboutTextSections.forEach(textSection => {
-      textSection.classList.remove('show'); 
-      if (textSection.id === section) {
-        textSection.classList.add('show'); 
-      }
-    });
-  });
+introButton.addEventListener("click", function() {
+  firstChild.style.marginLeft = "0vw";
 });
+
+
+educationButton.addEventListener("click", function() {
+  firstChild.style.marginLeft = "-83vw";
+});
+
+
+experienceButton.addEventListener("click", function() {
+  firstChild.style.marginLeft = "-166vw";
+});
+
+
+skillsButton.addEventListener("click", function() {
+  firstChild.style.marginLeft = "-249vw";
+});
+
 
 
 
