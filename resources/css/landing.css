@@ -62,7 +62,23 @@ you'll learn about it later. */
   }
 }
 
-
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 
 * {
   margin: 0;
@@ -374,8 +390,14 @@ section#contact h1{
   flex-direction: column;
 }
 
+.lineUp {
+  animation: 2s anim-lineUp ease-out;
+}
 
 
+.about--content .intro{
+  background-color: #f6c3b4;
+}
 
 .intro .title{
   font-size: 5vw;
@@ -385,27 +407,74 @@ section#contact h1{
 
 .intro .subtitle{
   font-size: 3vw;
+  margin-bottom: 1vw;
 }
 
+.intro .bio{
+  font-size: 1.5vw;
+}
 
-
-.about--content .introduction{
-  background-color: #f6c3b4;
+.intro .right{
+  background-image: url(../images/dcarvalho-logo.jpeg);
+  object-fit: cover;
+  background-size: 120% 100%;
 }
 
 .about--content .education{
   background-color: #87a2c8;
 }
 
+.education .right{
+  display: flex;
+  flex-direction: column;
+  padding: 3vw;
+  padding-top: 3vw;
+}
+
+.education .title{
+  font-size: 4vw;
+  line-height: 4vw;
+  margin-bottom: 2vw;
+}
+
+.education .subtitle{
+  font-size: 1.5vw;
+  margin-bottom: 1vw;  
+}
+
+
+
 .about--content .experience{
   background-color: #aab590;
 }
+
+.experience .title{
+  font-size: 8vw;
+  line-height: 4vw;
+  margin-bottom: 2vw;
+}
+
+.experience .subtitle{
+  font-size: 2vw;
+  margin-bottom: 1vw;  
+}
+
+
 
 .about--content .skills{
   background-color: #97bcbcb8;
 }
 
+.skills .title{
+  font-size: 8vw;
+  line-height: 4vw;
+  margin-bottom: 2vw;
+}
 
+.skills .subtitle{
+  font-size: 2vw;
+  margin-bottom: 1vw;  
+}
 
 
 
