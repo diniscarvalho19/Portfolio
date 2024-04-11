@@ -4,10 +4,13 @@ let hoursElement = document.getElementById("hours");
 let minutesElement = document.getElementById("minutes");
 let overlay = document.querySelector(".curtain");
 
-let introButton = document.querySelector(".intro");
-let educationButton = document.querySelector(".education");
-let experienceButton = document.querySelector(".experience");
-let skillsButton = document.querySelector(".skills");
+let  radioButtons = document.getElementsByName('about--radio');
+let introButton = radioButtons[0];
+let educationButton = radioButtons[1];
+let experienceButton = radioButtons[2];
+let skillsButton = radioButtons[3];
+
+let aboutNavigation = document.querySelector(".about--navigation");
 
 let firstChild = document.querySelector(".about--content > div:first-child");
 
@@ -40,21 +43,25 @@ function updateTime() {
 
 introButton.addEventListener("click", function() {
   firstChild.style.marginLeft = "0vw";
+  aboutNavigation.style.backgroundImage = "url('../images/about-intro.jpg')";
 });
 
 
 educationButton.addEventListener("click", function() {
   firstChild.style.marginLeft = "-83vw";
+  aboutNavigation.style.backgroundImage = "url('../images/about-education.jpg')";
 });
 
 
 experienceButton.addEventListener("click", function() {
   firstChild.style.marginLeft = "-166vw";
+  aboutNavigation.style.backgroundImage = "url('../images/about-experience.jpg')";
 });
 
 
 skillsButton.addEventListener("click", function() {
   firstChild.style.marginLeft = "-249vw";
+  aboutNavigation.style.backgroundImage = "url('../images/about-skills.jpg')";
 });
 
 
