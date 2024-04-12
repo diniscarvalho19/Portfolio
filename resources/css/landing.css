@@ -80,6 +80,23 @@ you'll learn about it later. */
   }
 }
 
+@keyframes scroll-down {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translateY(1vw);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-1vw);
+    opacity: 0;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -421,7 +438,7 @@ section#contact h1{
 }
 
 .about--content .education{
-  background-color: #87a2c8;
+  background-color: #8fa5c4d1;
 }
 
 .education .right{
@@ -444,20 +461,168 @@ section#contact h1{
 
 
 
-.about--content .experience{
-  background-color: #aab590;
-}
-
 .experience .title{
   font-size: 8vw;
   line-height: 4vw;
-  margin-bottom: 2vw;
+  margin-bottom: 3vw;
 }
 
 .experience .subtitle{
   font-size: 2vw;
   margin-bottom: 1vw;  
 }
+
+.experience .left{
+  margin: -3vw;
+}
+
+
+.red {
+  background-color: #aab590;
+}
+
+.blue {
+  background-color: #aab59092;
+}
+
+.green {
+  background-color: #aab59048;
+}
+
+.scroll-snap-card {
+  height: 46vw;
+  width: 83vw;
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scroll-snap-card::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-snap-card .slide {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.scroll-snap-card .slide .header{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.scroll-snap-card .slide .title {
+  margin-top: 4vw;
+  line-height: 6vw;
+  margin-left: 2vw;
+}
+
+.scroll-snap-card .slide .location {
+  margin-left: 1vw;
+  margin-top: 5vw;
+  font-size: 2vw;
+  color: white;
+  font-weight: 700;
+}
+
+.scroll-snap-card .slide .body--first{
+  display: flex;
+}
+
+.scroll-snap-card .slide .body--first .text{
+  font-size: 3vw;
+  margin-left: 2vw;
+  margin-top: 19vw;
+  width: fit-content;
+}
+
+
+
+.scroll-snap-card .slide .scroller {
+  width: 39vw;
+  height: fit-content;
+  font-size: 2vw;
+  animation: scroll-down 2s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-snap-card .slide.red .scroller{
+  margin-top: 26vw;
+
+}
+
+
+.scroll-snap-card .slide .body--second .text{
+  font-size: 2vw;
+  margin-left: 2vw;
+  width: fit-content;
+}
+
+.slide.blue .header .title{
+  font-size: 5vw;
+}
+
+.body--second .text{
+  margin-top: -2vw;
+}
+
+.problem {
+  width: 83vw;
+  height: 46vw;
+  perspective: 100vw;
+}
+
+.problem-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.problem:active .problem-inner {
+  transform: rotateY(180deg);
+}
+
+.problem-front,
+.problem-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.problem-front {
+  background-color: #000000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  transform: rotateY(0deg);
+}
+
+.problem-back {
+  background-color: #4373759c;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vw;
+  transform: rotateY(180deg);
+}
+
+.scroll-snap-card .slide.blue .scroller{
+  margin-top: 5vw;
+
+}
+
 
 
 
