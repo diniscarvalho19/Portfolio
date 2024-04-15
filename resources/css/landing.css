@@ -460,7 +460,7 @@ section#contact h1{
 }
 
 .intro .bio{
-  margin-top: 16vw;
+  margin-top: 0vw;
   font-size: 2vw;
   font-weight: bolder;
 }
@@ -716,27 +716,94 @@ section#contact h1{
 
 
 .about--content .skills{
-  background-color: #97bcbcb8;
+  background-color: #121212;
 }
 
 .skills .title{
   font-size: 8vw;
   line-height: 4vw;
   margin-bottom: 1vw;
+  color: var(--home-bg-color);
 }
 
-.skills .subtitle{
-  font-size: 3vw;
-  margin-bottom: 4vw;  
+.skills--body{
+  height: 38vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.tagcloud {
+  font-size: 1vw;
+}
+
+.tagcloud--item:hover {
+  font-size: 2vw;
+  cursor: pointer;
+  color: #fcdb71;
+  transition: all 1s;
+}
+
+
+.sphere{
+  color: var(--home-bg-color);
 }
 
 
 
+.selection-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 1vw;
+  color: var(--home-bg-color);
+}
+
+.selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 4vw;
+  height: 4vw;
+  border: 0.25vw solid #079ad9;
+  border-radius: 0.5vw;
+  padding: 1vw;
+  transition: transform 0.3s ease;
+}
+
+.selection .icon svg {
+  fill: #079ad9;
+  width: 2vw;
+  height: 2vw;
+}
+
+.selection label {
+  text-align: center;
+  font-size: 0.65vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1vw;
+  color: #079ad9;
+}
+
+.selection.active {
+  background-color: #079ad9;
+  border: 0.25vw solid #ffffff;
+  color: white;
+  transform: scale(1.1, 1.1);
+}
+
+.selection.active .icon svg {
+  fill: white;
+  background-color: #079ad9;
+}
 
 
-
-
-
+.selection.active label{
+  color: white;
+  background-color: #079ad9;
+}
 
 
 

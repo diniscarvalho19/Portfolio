@@ -27,6 +27,28 @@ let aboutNavigation = document.querySelector(".about--navigation");
 
 let firstChild = document.querySelector(".about--content > div:first-child");
 
+let selectionDivs = document.querySelectorAll('.selection');
+
+
+const techDictionary = {
+  'RUBY': ['proj', 'work'],
+  'RUBYonRAILS': ['proj', 'work'],
+  'HTML': ['proj', 'uni', 'work'],
+  'CSS': ['proj',  'uni', 'work'],
+  'JAVASCRIPT': ['proj',  'uni', 'work'],
+  'JAVA': ['uni'],
+  'C#': ['uni'],
+  'C': ['uni'],
+  'PYTHON': ['uni'],
+  'Git': ['proj', 'work', 'uni'],
+  'RESTful API': ['proj', 'work', 'uni'],
+  'OUTSYSTEMS': ['uni'],
+  'SQL': ['proj', 'work', 'uni'],
+  'PHASER': ['uni'],
+  'HTML5': ['uni'],
+  'UNITY': ['uni']
+};
+
 
 
 // FUNCTIONS
@@ -101,6 +123,38 @@ skillsButton.addEventListener("click", function() {
 
 
 
+
+var tagCloud = TagCloud('.sphere',  Object.keys(techDictionary), {
+  radius: 400,
+  maxSpeed: 'normal',
+  initSpeed: 'fast',
+  direction: 135,
+  keep: true
+});
+
+
+function handleActivation(selectedDivIds) {
+  selectionDivs.forEach(div => {
+      div.classList.remove('active');
+  });
+
+  selectedDivIds.forEach(id => {
+      const selectedDiv = document.getElementById(id);
+      if (selectedDiv) { 
+          selectedDiv.classList.add('active');
+      }
+  });
+}
+
+
+
+
+let rootEl = document.querySelector('.sphere');
+rootEl.addEventListener('click', function clickEventHandler(e) {
+    if (e.target.className === 'tagcloud--item') {
+          handleActivation( techDictionary[e.target.innerText]);
+    }
+});
 
 document.addEventListener("DOMContentLoaded", function() {
   overlay.classList.add("fade-out");
