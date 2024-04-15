@@ -1,6 +1,7 @@
 /* this is some magical font-importing.  
 you'll learn about it later. */
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 
 @keyframes blinkCursor {
@@ -53,6 +54,25 @@ you'll learn about it later. */
   to {
     opacity: 0;
     display: none;
+  }
+}
+
+
+@keyframes iconRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(130%);
+  }
+}
+
+@keyframes textUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-125%);
   }
 }
 
@@ -127,6 +147,12 @@ html {
 
 .archivo-black-regular {
   font-family: "Archivo Black", sans-serif;
+  font-style: normal;
+}
+
+.source-code-font{
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
   font-style: normal;
 }
 
@@ -349,6 +375,11 @@ section#contact h1{
     -webkit-transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1),
       -webkit-transform .25s cubic-bezier(0, 0, .2, 1);
   }
+
+  .input:hover {
+    transform: scale(1.3);
+    transition-duration: 0.5s;
+  }
   
   .input,
   .input:active {
@@ -356,6 +387,7 @@ section#contact h1{
   }
   
   .input:checked {
+    transform: scale(1.3);
     background-position: 0 0;
   }
   
@@ -373,7 +405,7 @@ section#contact h1{
   width: 83vw;
   display: flex;
   margin-top: 1.6vw;
-  height: 94%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -400,7 +432,6 @@ section#contact h1{
 
 
 .about--content .right{
-  border: #000000 2px solid;
   display: flex;
   width: 100%;
   height: 46vw;
@@ -419,26 +450,36 @@ section#contact h1{
 .intro .title{
   font-size: 5vw;
   line-height: 4vw;
-  margin-bottom: 2vw;
+  margin-bottom: 1vw;
 }
 
 .intro .subtitle{
   font-size: 3vw;
-  margin-bottom: 1vw;
+  margin-bottom: 3vw;
+  font-weight: bolder;
 }
 
 .intro .bio{
-  font-size: 1.5vw;
+  margin-top: 16vw;
+  font-size: 2vw;
+  font-weight: bolder;
 }
 
 .intro .right{
-  background-image: url(../images/dcarvalho-logo.jpeg);
+  height: 48vw;
+  background-image: url(../images/intro-right-3.jpg);
   object-fit: cover;
-  background-size: 120% 100%;
+  background-size: 100% 110%;
 }
 
 .about--content .education{
   background-color: #8fa5c4d1;
+}
+
+.education .left{
+  background-image: url(../images/education-left.jpg);
+  object-fit: cover;
+  background-size: 100% 110%;
 }
 
 .education .right{
@@ -446,6 +487,10 @@ section#contact h1{
   flex-direction: column;
   padding: 3vw;
   padding-top: 3vw;
+
+  background-image: url(../images/education-right.jpg);
+  object-fit: cover;
+  background-size: 150% 110%;
 }
 
 .education .title{
@@ -459,6 +504,29 @@ section#contact h1{
   margin-bottom: 1vw;  
 }
 
+#gray{
+  color: #ffffffcc
+}
+
+#dark--gray{
+  color: #00000075
+}
+
+#red{
+  color: #a83437;
+}
+
+#blue{
+  color: #45696b;
+}
+
+#yellow{
+  color: #c0973d;
+}
+
+#green{
+  color: #6f852b;
+}
 
 
 .experience .title{
@@ -472,25 +540,31 @@ section#contact h1{
   margin-bottom: 1vw;  
 }
 
-.experience .left{
-  margin: -3vw;
-}
 
 
 .red {
   background-color: #aab590;
+  background-image: url(../images/experience-1.jpg);
+  object-fit: cover;
+  background-size: 100% 100%;
 }
 
 .blue {
-  background-color: #aab59092;
+  background-color: #aab590;
+  background-image: url(../images/experience-2.jpg);
+  object-fit: cover;
+  background-size: 100% 100%;
 }
 
 .green {
-  background-color: #aab59048;
+  background-color: #aab590;
+  background-image: url(../images/experience-3.jpg);
+  object-fit: cover;
+  background-size: 100% 100%;
 }
 
 .scroll-snap-card {
-  height: 46vw;
+  height: 48vw;
   width: 83vw;
   scroll-snap-type: y mandatory;
   overflow: auto;
@@ -525,7 +599,6 @@ section#contact h1{
   margin-left: 1vw;
   margin-top: 5vw;
   font-size: 2vw;
-  color: white;
   font-weight: 700;
 }
 
@@ -536,14 +609,14 @@ section#contact h1{
 .scroll-snap-card .slide .body--first .text{
   font-size: 3vw;
   margin-left: 2vw;
-  margin-top: 19vw;
+  margin-top: 21vw;
   width: fit-content;
 }
 
 
 
 .scroll-snap-card .slide .scroller {
-  width: 39vw;
+  width: 25vw;
   height: fit-content;
   font-size: 2vw;
   animation: scroll-down 2s infinite;
@@ -553,76 +626,87 @@ section#contact h1{
 }
 
 .scroll-snap-card .slide.red .scroller{
-  margin-top: 26vw;
+  margin-top: 28.5vw;
+  margin-left: 14vw;
 
 }
 
 
-.scroll-snap-card .slide .body--second .text{
-  font-size: 2vw;
-  margin-left: 2vw;
-  width: fit-content;
+
+
+.slide.blue .title,
+.slide.green .title{
+  font-size: 6vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
 }
 
-.slide.blue .header .title{
-  font-size: 5vw;
+.slide.blue .body,
+.slide.green .body{
+  font-size: 2.7vw;
+  padding-left: 18vw;
+  padding-right: 2vw;
+  line-height: 6vw;
 }
 
-.body--second .text{
-  margin-top: -2vw;
+
+.smaller--text{
+  font-size: 2.1vw;
 }
 
-.problem {
-  width: 83vw;
-  height: 46vw;
-  perspective: 100vw;
+.scroll-snap-card .slide.blue .scroller
+{
+  margin-top: 7vw;
+  margin-left: 34vw;
+
 }
 
-.problem-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.999s;
-}
-
-.problem:active .problem-inner {
-  transform: rotateY(180deg);
-}
-
-.problem-front,
-.problem-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.problem-front {
-  background-color: #000000;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5vw;
-  transform: rotateY(0deg);
-}
-
-.problem-back {
-  background-color: #4373759c;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5vw;
-  transform: rotateY(180deg);
-}
-
-.scroll-snap-card .slide.blue .scroller{
+.learn--more {
+  text-decoration: none;
+  width: 31vw;
+  height: 4vw;
   margin-top: 5vw;
+  margin-left: 17vw;
+  border-radius: 0.5vw;
+  border: none;
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #040f16;
+  color: #f5f5f5;
+  overflow: hidden;
+  
+}
+
+.learn--more .text{
+
+  display: flex;
+  flex-wrap: nowrap;
 
 }
 
+.learn--more .icon {
+  width: 4vw;
+  padding-top: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.learn--more:hover .text{
+  animation: textUp 0.5s forwards;
+}
+.learn--more:hover .icon {
+  animation: iconRight 0.5s forwards;
+}
+
+
+.learn--more:active .icon {
+  transform: scale(0.85);
+}
 
 
 
@@ -633,12 +717,12 @@ section#contact h1{
 .skills .title{
   font-size: 8vw;
   line-height: 4vw;
-  margin-bottom: 2vw;
+  margin-bottom: 1vw;
 }
 
 .skills .subtitle{
-  font-size: 2vw;
-  margin-bottom: 1vw;  
+  font-size: 3vw;
+  margin-bottom: 4vw;  
 }
 
 
