@@ -35,7 +35,11 @@ let arrowDiv = document.querySelector('.arrow');
 
 let rootEl = document.querySelector('.sphere');
 
+let homeButton = document.getElementById('magic--home--button');
 
+let aboutButton = document.getElementById('magic--about--button');
+
+let contactButton = document.getElementById('magic--contact--button');
 
 const techDictionary = {
   'RUBY': ['proj', 'work'],
@@ -111,6 +115,13 @@ function handleActivation(selectedDivIds) {
   });
 }
 
+function deactivateAllProjects(){
+  cardDivs.forEach(function(otherCard) {
+    otherCard.classList.remove('active');
+    otherCard.querySelector('.body').classList.remove('active');
+  });
+}
+
 
 // EVENT LISTENERS
 
@@ -168,10 +179,7 @@ rootEl.addEventListener('click', function clickEventHandler(e) {
 
 cardDivs.forEach(function(card) {
   card.addEventListener('click', function() {
-      cardDivs.forEach(function(otherCard) {
-        otherCard.classList.remove('active');
-        otherCard.querySelector('.body').classList.remove('active');
-      });
+      deactivateAllProjects();
       card.classList.add('active');
       card.querySelector('.body').classList.add('active');
   });
@@ -185,6 +193,13 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById("baker--button").onclick = function () {
   location.href = "https://diniscarvalho19.github.io/Padeira-de-Aljubarrota/";
 };
+
+
+homeButton.addEventListener('click', deactivateAllProjects);
+
+aboutButton.addEventListener('click', deactivateAllProjects);
+
+contactButton.addEventListener('click', deactivateAllProjects);
 
 
 // FUNTION CALLS
