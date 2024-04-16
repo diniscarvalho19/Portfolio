@@ -80,7 +80,7 @@ arrow.addEventListener("click", () => {
     setTimeout(() => {
         spaceship.classList.add("fly-away");
         snowContainer.classList.add("fade-out");
-    }, 2000); 
+    }, 1000); 
 
    
     

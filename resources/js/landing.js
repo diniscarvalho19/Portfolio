@@ -29,6 +29,13 @@ let firstChild = document.querySelector(".about--content > div:first-child");
 
 let selectionDivs = document.querySelectorAll('.selection');
 
+let cardDivs = document.querySelectorAll('.cards > div');
+
+let arrowDiv = document.querySelector('.arrow');
+
+let rootEl = document.querySelector('.sphere');
+
+
 
 const techDictionary = {
   'RUBY': ['proj', 'work'],
@@ -45,13 +52,20 @@ const techDictionary = {
   'OUTSYSTEMS': ['uni'],
   'SQL': ['proj', 'work', 'uni'],
   'PHASER': ['uni'],
-  'HTML5': ['uni'],
   'UNITY': ['uni']
 };
 
 
 
 // FUNCTIONS
+
+function addArrowSpans(maxArrow){
+  for(let i = 0; i < maxArrow; i++){
+    let newSpan = document.createElement('span');
+    newSpan.style.animationDelay = -i/2 + "s";    
+    arrowDiv.appendChild(newSpan);
+  }
+}
 
 function updateTime() {
   const date = new Date();
@@ -75,6 +89,30 @@ function updateTime() {
   minutesElement.textContent = minutesFormattedTime.padStart(2, "0");
 }
 
+var tagCloud = TagCloud('.sphere',  Object.keys(techDictionary), {
+  radius: 400,
+  maxSpeed: 'normal',
+  initSpeed: 'fast',
+  direction: 135,
+  keep: true
+});
+
+
+function handleActivation(selectedDivIds) {
+  selectionDivs.forEach(div => {
+      div.classList.remove('active');
+  });
+
+  selectedDivIds.forEach(id => {
+      const selectedDiv = document.getElementById(id);
+      if (selectedDiv) { 
+          selectedDiv.classList.add('active');
+      }
+  });
+}
+
+
+// EVENT LISTENERS
 
 introButton.addEventListener("click", function() {
   firstChild.style.marginLeft = "0vw";
@@ -121,45 +159,38 @@ skillsButton.addEventListener("click", function() {
   skillsTitle.classList.add("lineUp");
 });
 
-
-
-
-var tagCloud = TagCloud('.sphere',  Object.keys(techDictionary), {
-  radius: 400,
-  maxSpeed: 'normal',
-  initSpeed: 'fast',
-  direction: 135,
-  keep: true
-});
-
-
-function handleActivation(selectedDivIds) {
-  selectionDivs.forEach(div => {
-      div.classList.remove('active');
-  });
-
-  selectedDivIds.forEach(id => {
-      const selectedDiv = document.getElementById(id);
-      if (selectedDiv) { 
-          selectedDiv.classList.add('active');
-      }
-  });
-}
-
-
-
-
-let rootEl = document.querySelector('.sphere');
 rootEl.addEventListener('click', function clickEventHandler(e) {
-    if (e.target.className === 'tagcloud--item') {
-          handleActivation( techDictionary[e.target.innerText]);
-    }
+  if (e.target.className === 'tagcloud--item') {
+        handleActivation( techDictionary[e.target.innerText]);
+  }
 });
+
+
+cardDivs.forEach(function(card) {
+  card.addEventListener('click', function() {
+      cardDivs.forEach(function(otherCard) {
+        otherCard.classList.remove('active');
+        otherCard.querySelector('.body').classList.remove('active');
+      });
+      card.classList.add('active');
+      card.querySelector('.body').classList.add('active');
+  });
+});
+
 
 document.addEventListener("DOMContentLoaded", function() {
   overlay.classList.add("fade-out");
 });
 
+document.getElementById("baker--button").onclick = function () {
+  location.href = "https://diniscarvalho19.github.io/Padeira-de-Aljubarrota/";
+};
+
+
+// FUNTION CALLS
+
 updateTime();
+
+addArrowSpans(20);
 
 setInterval(updateTime, 60000); 
