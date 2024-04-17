@@ -82,7 +82,7 @@ you'll learn about it later. */
     transform: translateY(0%);
   }
   100% {
-    transform: translateY(-125%);
+    transform: translateY(-150%);
   }
 }
 
