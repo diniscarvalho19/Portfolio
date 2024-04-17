@@ -41,6 +41,12 @@ let aboutButton = document.getElementById('magic--about--button');
 
 let contactButton = document.getElementById('magic--contact--button');
 
+let contactContainer = document.querySelector('.contact--body');
+
+let styleElement = document.createElement('style');
+styleElement.id = 'dynamicStyles';
+document.head.appendChild(styleElement);
+
 const techDictionary = {
   'RUBY': ['proj', 'work'],
   'RUBYonRAILS': ['proj', 'work'],
@@ -188,6 +194,8 @@ cardDivs.forEach(function(card) {
 
 document.addEventListener("DOMContentLoaded", function() {
   overlay.classList.add("fade-out");
+
+  
 });
 
 document.getElementById("baker--button").onclick = function () {
@@ -220,6 +228,22 @@ homeButton.addEventListener('click', deactivateAllProjects);
 aboutButton.addEventListener('click', deactivateAllProjects);
 
 contactButton.addEventListener('click', deactivateAllProjects);
+
+contactContainer.addEventListener('mousemove', (e) => {
+  const mouseX = (e.pageX / contactContainer.offsetWidth * -200) - 50;
+  const mouseY = (e.pageY / contactContainer.offsetHeight * -200) - 50;
+
+  styleElement.textContent = `
+    @keyframes scroll {
+      100% {
+        background-position: ${mouseX}% ${mouseY}%;
+      }
+    }
+  `;
+});
+
+
+
 
 
 // FUNTION CALLS

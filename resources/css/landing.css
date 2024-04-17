@@ -997,8 +997,145 @@ video {
 
 
 #contact{
-  background:#99bbad;
+  animation: scroll 50s linear infinite;
+  background-color: #191a1a;
+  background-image: linear-gradient(0deg, transparent 24%, var(--projects-bg-color) 25%, var(--projects-bg-color) 26%, transparent 27%,transparent 74%, var(--projects-bg-color) 75%, var(--projects-bg-color) 76%, transparent 77%,transparent),
+  linear-gradient(90deg, transparent 24%, var(--projects-bg-color) 25%, var(--projects-bg-color) 26%, transparent 27%,transparent 74%, var(--projects-bg-color) 75%, var(--projects-bg-color) 76%, transparent 77%,transparent);
+  background-size: 5vw 5vw;
 }
+
+@keyframes rotateL {
+
+  100% { 
+      transform: rotate(1turn)  ;
+  } 
+}
+
+@keyframes rotateR {
+
+  100% { 
+      transform: rotate(-1turn)  ;
+  } 
+}
+
+
+.contact--body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: all;
+  gap: 2vw;
+  width: 100%;
+  height: 100%;
+  animation: rotateL 50s linear infinite;
+}
+
+.contact--body > div > button > svg {
+  fill: rgb(255, 255, 255);
+  animation: rotateR 50s linear infinite;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+
+.contact--button {
+  width: 10vw;
+  height: 10vw;
+  outline: none;
+  border: none;
+  background: rgb(0, 0, 0);
+  border: 0.2vw solid rgba(255, 255, 255, 0.685);
+  box-shadow: rgba(255, 255, 255, 0.137) 0 0.5vw 0.5vw 0, rgba(255, 255, 255, 0.24) 0 0.5vw 0.5vw 0;
+  transition: .2s ease-in-out;
+}
+
+.contact--button.left--up{
+  border-radius: 9vw 0.5vw 0.5vw 0.5vw;
+}
+
+.contact--button.right--up{
+  border-radius: 0.5vw 9vw 0.5vw 0.5vw;
+
+}
+
+.contact--button.left--down{
+  border-radius: 0.5vw 0.5vw 0.5vw 9vw;
+}
+
+.contact--button.right--down{
+  border-radius: 0.5vw 0.5vw 9vw 0.5vw;
+
+}
+
+.contact--body > div > button:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+
+
+.contact--button.left--up:hover{
+  background-color: #cc39a4;
+}
+
+
+.contact--button.right--up:hover {
+  background-color: #03A9F4;
+}
+
+.contact--button.left--down:hover {
+  background-color: black;
+}
+
+.contact--button.right--down:hover {
+  background-color: #8c9eff;
+}
+
+.instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+
+.twitter {
+  margin-top: 1.5em;
+  margin-left: -.9em;
+  fill: #03A9F4;
+}
+
+
+.github {
+  margin-top: -.6em;
+  margin-left: 1.2em;
+}
+
+.discord {
+  margin-top: -.9em;
+  margin-left: -1.2em;
+  fill: #8c9eff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 a[id="home"]:target ~ #home{
   transform:translate3d(0,0,0);
