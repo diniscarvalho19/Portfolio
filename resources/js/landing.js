@@ -194,6 +194,26 @@ document.getElementById("baker--button").onclick = function () {
   location.href = "https://diniscarvalho19.github.io/Padeira-de-Aljubarrota/";
 };
 
+document.getElementById("blindness--button").onclick = function () {
+  location.href = "https://github.com/diniscarvalho19/Blindness";
+};
+
+document.getElementById("rock--button").onclick = function () {
+  location.href = "../html/rock-paper-scissors.html";
+};
+
+document.getElementById("sketch--button").onclick = function () {
+  location.href = "../html/etch-a-sketch.html";
+};
+
+document.getElementById("portfolio--button").onclick = function () {
+  location.href = "../../index.html";
+};
+
+document.getElementById("thesis--button").onclick = function () {
+  location.href = "https://github.com/diniscarvalho19/Management-tools-of-the-re-commerce-system-LoopOS";
+};
+
 
 homeButton.addEventListener('click', deactivateAllProjects);
 
