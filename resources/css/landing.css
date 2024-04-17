@@ -989,10 +989,48 @@ video {
 }
 
 .cards > div .body img {
-  width: 13vw;
-  height: 13vw;
+ transform: translate(-5vw, 28vw);
+  width: 73%;
+  min-height: 100%;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4; 
 }
 
+
+.cards > div .body button {
+  cursor: pointer;
+  color: var(--about-bg-color);
+  text-decoration: none;
+  font-size: 1vw;
+  border: none;
+  background: none;
+  font-weight: 600;
+}
+
+.cards > div .body button:hover {
+  color: var(--home-bg-color-bg-color);
+  transition-duration: all 0.1s;
+}
+
+.cards > div .body button::before {
+  margin-left: auto;
+}
+
+.cards > div .body button::after, .cards > div .body button::before {
+  content: '';
+  width: 0%;
+  height: 0.2vw;
+  margin-top: 0.2vw;
+  margin-bottom: 0.2vw;
+  background: #f44336;
+  display: block;
+  transition: 0.5s;
+}
+
+.cards > div .body button:hover::after, .cards > div .body button:hover::before {
+  width: 100%;
+}
 
 
 
