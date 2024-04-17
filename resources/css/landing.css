@@ -143,6 +143,23 @@ you'll learn about it later. */
   }
 }
 
+
+@keyframes input-animation {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(2.5);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -377,13 +394,23 @@ section#contact h1{
     transition: background-image 0.5s ease-in-out; 
   }
 
+  .start--glow{
+    animation: input-animation 2s forwards;
+    animation-delay: var(--delay);
+  }
+  
+
+
+
 
   .input {
+    opacity: 0;
     -webkit-appearance: none;
     width: 2vw;
     height: 2vw;
     border-radius: 1vw;
     cursor: pointer;
+    border: 0.15vw solid rgb(255, 255, 255);
     background-color: var(--about-bg-color);
     background-image: -webkit-radial-gradient( 
       hsla(200, 100%, 100%, 1) 0%, 
@@ -548,15 +575,15 @@ section#contact h1{
 }
 
 #blue{
-  color: #45696b;
+  color: #45696be3;
 }
 
 #yellow{
-  color: #c0973d;
+  color: #c0973dda;
 }
 
 #green{
-  color: #6f852b;
+  color: #6f852bd0;
 }
 
 
@@ -675,7 +702,16 @@ section#contact h1{
   font-size: 2.7vw;
   padding-left: 18vw;
   padding-right: 2vw;
-  line-height: 6vw;
+}
+
+.slide.blue .body .paragraph,
+.slide.green .body .paragraph{
+  margin-bottom: 3vw;
+}
+
+.slide.blue .body .paragraph .diamond,
+.slide.green .body .paragraph .diamond{
+  font-size: 2vw;
 }
 
 
@@ -685,7 +721,7 @@ section#contact h1{
 
 .scroll-snap-card .slide.blue .scroller
 {
-  margin-top: 7vw;
+  margin-top: 1vw;
   margin-left: 34vw;
 
 }

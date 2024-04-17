@@ -25,6 +25,8 @@ let skillsTitle = document.querySelector(".skills .title");
 
 let aboutNavigation = document.querySelector(".about--navigation");
 
+let inputs = document.querySelectorAll('.input');
+
 let firstChild = document.querySelector(".about--content > div:first-child");
 
 let selectionDivs = document.querySelectorAll('.selection');
@@ -225,7 +227,14 @@ document.getElementById("thesis--button").onclick = function () {
 
 homeButton.addEventListener('click', deactivateAllProjects);
 
-aboutButton.addEventListener('click', deactivateAllProjects);
+
+aboutButton.addEventListener('click', function() {
+  deactivateAllProjects;
+  inputs.forEach(function(inp) {
+    inp.classList.add("start--glow");
+  });
+});
+
 
 contactButton.addEventListener('click', deactivateAllProjects);
 
