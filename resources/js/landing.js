@@ -45,6 +45,9 @@ let contactButton = document.getElementById('magic--contact--button');
 
 let contactContainer = document.querySelector('.contact--body');
 
+let emailButton = document.querySelector('.contact--button.left--up');
+
+
 let styleElement = document.createElement('style');
 styleElement.id = 'dynamicStyles';
 document.head.appendChild(styleElement);
@@ -238,18 +241,27 @@ aboutButton.addEventListener('click', function() {
 
 contactButton.addEventListener('click', deactivateAllProjects);
 
-contactContainer.addEventListener('mousemove', (e) => {
-  const mouseX = (e.pageX / contactContainer.offsetWidth * -200) - 50;
-  const mouseY = (e.pageY / contactContainer.offsetHeight * -200) - 50;
-
-  styleElement.textContent = `
-    @keyframes scroll {
-      100% {
-        background-position: ${mouseX}% ${mouseY}%;
-      }
-    }
-  `;
+emailButton.addEventListener("click", function() {
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "send_email.php", true);
+  xhr.send();
 });
+
+
+
+// contactContainer.addEventListener('mousemove', (e) => {
+//   const mouseX = (e.pageX / contactContainer.offsetWidth * 100) - 50;
+//   const mouseY = (e.pageY / contactContainer.offsetHeight * 100) - 50;
+  
+
+//   styleElement.textContent = `
+//     @keyframes scroll {
+//       100% {
+//         background-position: ${mouseX * -4}% ${mouseY * -4}%;
+//       }
+//     }
+//   `;
+// });
 
 
 
