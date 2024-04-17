@@ -45,7 +45,6 @@ let contactButton = document.getElementById('magic--contact--button');
 
 let contactContainer = document.querySelector('.contact--body');
 
-let emailButton = document.querySelector('.contact--button.left--up');
 
 
 let styleElement = document.createElement('style');
@@ -241,11 +240,7 @@ aboutButton.addEventListener('click', function() {
 
 contactButton.addEventListener('click', deactivateAllProjects);
 
-emailButton.addEventListener("click", function() {
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "send_email.php", true);
-  xhr.send();
-});
+
 
 
 
