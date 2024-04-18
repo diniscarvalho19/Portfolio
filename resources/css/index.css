@@ -285,8 +285,8 @@ input[type="checkbox"]:checked ~ div {
     transform: translate(-50%, -50%);
   }
 
-  .spaceship img{
-    transform: scale(4);
+  .spaceship svg{
+    transform: scale(3);
   }
 
   .fly-away{
