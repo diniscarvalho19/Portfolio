@@ -76,17 +76,23 @@ arrow.addEventListener("click", () => {
 
     snowGenerator(200);
     spaceship.classList.add("fade-in");
+    
+
 
     setTimeout(() => {
         spaceship.classList.add("fly-away");
+    }, 500); 
+
+    setTimeout(() => {
         snowContainer.classList.add("fade-out");
-    }, 1000); 
+    }, 3000);   
+
 
    
     
     setTimeout(() => {
         window.location.href = "./resources/html/landing.html";
-    }, 3800); 
+    }, 4500); 
 });
 
 
