@@ -19,8 +19,10 @@ function snowGenerator(numElements){
 
     for (var i = 0; i < numElements; i++) {
         var span = document.createElement('span');
-        var randomI = getRandomInt(20, 40);
-        span.style.setProperty('--i', randomI);
+        var randomI = getRandomInt(3000, 5000);
+        var randomJ = getRandomInt(1, 10);
+        span.style.setProperty('--i', randomI + 'ms');
+        span.style.setProperty('--j', randomJ * -1 + 's');
         snowContainer.appendChild(span);
     }
 
@@ -79,9 +81,7 @@ arrow.addEventListener("click", () => {
     
 
 
-    setTimeout(() => {
-        spaceship.classList.add("fly-away");
-    }, 500); 
+    spaceship.classList.add("fly-away");
 
     setTimeout(() => {
         snowContainer.classList.add("fade-out");

@@ -274,7 +274,8 @@ input[type="checkbox"]:checked ~ div {
     margin: 0 0.2vw;
     border-radius: 50%;
     animation: snowing linear infinite;
-    animation-duration: calc(40s / var(--i));
+    animation-duration: var(--i);
+    animation-delay: var(--j);
   }
 
   .spaceship{
@@ -291,7 +292,7 @@ input[type="checkbox"]:checked ~ div {
   }
 
   .fly-away{
-    transition-duration: 4s;
+    transition-duration: 5s;
     left: 110%;
   }
   
