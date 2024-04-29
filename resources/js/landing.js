@@ -57,6 +57,7 @@ const techDictionary = {
   'HTML': ['proj', 'uni', 'work'],
   'CSS': ['proj',  'uni', 'work'],
   'JAVASCRIPT': ['proj',  'uni', 'work'],
+  'REACT': ['proj'],
   'JAVA': ['uni'],
   'C#': ['uni'],
   'C': ['uni'],
@@ -224,6 +225,10 @@ document.getElementById("portfolio--button").onclick = function () {
 
 document.getElementById("thesis--button").onclick = function () {
   location.href = "https://github.com/diniscarvalho19/Management-tools-of-the-re-commerce-system-LoopOS";
+};
+
+document.getElementById("weather--button").onclick = function () {
+  location.href = "https://weather-archive-xp.netlify.app";
 };
 
 
